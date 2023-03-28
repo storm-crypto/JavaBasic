@@ -45,9 +45,27 @@ public class Main {
 //        System.out.println(Arrays.toString(a));
 
         // 数组赋值fill
-        int[] a = {2, 1, 5, 3, 4};
+//        int[] a = {2, 1, 5, 3, 4};
+//
+//        Arrays.fill(a, 3);
+//        System.out.println(Arrays.toString(a));
+        // 练习 ：743. 数组中的行
+        Scanner sc = new Scanner(System.in);
+        int l = sc.nextInt();
+        String op = sc.next();
 
-        Arrays.fill(a, 3);
-        System.out.println(Arrays.toString(a));
+        double[][] m = new double[12][12];
+
+        for (int i = 0; i < 12; i++)
+            for (int j = 0 ; j < 12; j++)
+                m[i][j] = sc.nextDouble();
+        double sum = 0;
+        for (int i = 0; i < 12; i++)
+            sum += m[l][i];
+
+        if (op.equals("M")) // java中一般是用equals来判断两个字符串是否相同，跟cpp不一样
+            System.out.printf("%.1f\n", sum / 12);
+        else
+            System.out.printf("%.1f\n", sum);
     }
 }
