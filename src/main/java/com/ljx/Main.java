@@ -6,9 +6,13 @@ import java.nio.BufferOverflowException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws   Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int x = Integer.parseInt(br.readLine());
-        System.out.println(x);
+    public static void main(String[] args){
+        String[] strs = {"aaa", "bbb", "ccc"};
+
+        for (String str: strs)
+        {
+            System.out.println(str);
+        }
+
     }
 }
