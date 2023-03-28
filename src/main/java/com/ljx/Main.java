@@ -8,9 +8,10 @@ import java.io.StringReader;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String str = br.readLine();
-        System.out.println(str);
+    public static void main(String[] args) throws   Exception {
+        System.out.println("Hello World");
+        System.out.println(123);
+        System.out.printf("%.2f\n", 3.1415926); // 格式化输出
+
     }
 }
