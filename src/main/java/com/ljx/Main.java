@@ -5,10 +5,12 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args){
-        Queue<Integer> q = new LinkedList<>();
-        q.add(1);
-        q.add(2);
-        q.remove();
-        System.out.println(q.peek());
+        Set<Integer> set  = new HashSet<>(); // 无序
+
+        set.add(1);
+        set.add(2);
+        set.add(3);
+
+        System.out.println(set.contains(3));
     }
 }
