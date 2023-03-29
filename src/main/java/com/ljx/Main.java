@@ -66,8 +66,12 @@ class ColorPoint extends Point{
 
 public class Main {
     public static void main(String[] args){
-        ColorPoint colorPoint = new ColorPoint(3, 4, "red");
-        System.out.println(colorPoint.toString());
-        System.out.println(colorPoint.getX()); // 访问符类的非private的成员变量和成员函数
+
+        // 多态，同一个类的实例，调用相同的函数，运行结果不同
+        Point a = new Point(3, 4);
+        System.out.println(a.toString());
+
+        a = new ColorPoint(4, 5, "green");
+        System.out.println(a.toString());
     }
 }
