@@ -1,26 +1,65 @@
 package com.ljx;
 
-import com.sun.javaws.IconUtil;
-import com.ljx.utils.ColorPoint;
-import com.ljx.utils.Point;
-import java.awt.*;
-import java.io.*;
-import java.nio.BufferOverflowException;
-import java.util.Arrays;
 import java.util.Scanner;
 
+interface Role{
+    public void greet();
+    public void move();
+    public int getSpeed();
+}
 
+// 接口的继承
+interface Hero extends Role{
+    public void attack();
+}
 
+class Zeus implements Hero, Role{
+    private final String name = "Zeus";
+    public void greet(){
+        System.out.println(name + ":Hi!" );
+    }
 
+    public void move(){
+        System.out.println(name + ":Move!" );
+    }
+
+    public int getSpeed(){
+        return 10;
+    }
+
+    public void attack(){
+        System.out.println(name + ": Attack!");
+    }
+}
+
+class Athena implements Hero{
+    private final String name = "Athena";
+    public void greet(){
+        System.out.println(name + ":Hi!" );
+    }
+
+    public void move(){
+        System.out.println(name + ":Move!" );
+    }
+
+    public int getSpeed(){
+        return 10;
+    }
+
+    public void attack(){
+        System.out.println(name + ": Attack!");
+    }
+}
 
 public class Main {
     public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请选择英雄：");
+        String name = sc.next();
+        Hero hero;
+        if (name.equals("Zeus")) hero = new Zeus();
+        else hero = new Athena();
 
-        // 多态，同一个类的实例，调用相同的函数，运行结果不同
-        Point a = new Point(3, 4);
-        System.out.println(a.toString());
-
-        a = new ColorPoint(4, 5, "green");
-        System.out.println(a.toString());
+        hero.greet();
     }
 }
