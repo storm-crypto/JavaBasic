@@ -2,17 +2,17 @@ package com.ljx;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Stack;
 
 
 public class Main {
     public static void main(String[] args){
-       List<Integer> list = new ArrayList<>();
+        Stack<Integer> stk = new Stack<>();
 
-       list.add(1);
-       list.add(2);
-       list.set(0, 100);
+        stk.push(1);
+        stk.push(2);
+        // stk.pop();
 
-        System.out.println(list.get(0));
+        System.out.println(stk.peek());
     }
 }
