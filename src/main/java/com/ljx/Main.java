@@ -5,12 +5,19 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args){
-        TreeSet<Integer> set  = new TreeSet<>(); // 无序
+        Map<Integer, String> map = new HashMap<>();
+        map.put(2, "abc");
+        map.put(5, "ljx");
+        map.put(7, "acwing");
 
-        set.add(1);
-        set.add(2);
-        set.add(3);
+        System.out.println(map);
+        System.out.println(map.get(5));
+        System.out.println(map.containsKey(2));
+        System.out.println(map.entrySet());
 
-        System.out.println(set.ceiling(4));
+        for(Map.Entry<Integer, String> p : map.entrySet()){
+            System.out.println(p.getKey());
+            System.out.println(p.getValue());
+        }
     }
 }
