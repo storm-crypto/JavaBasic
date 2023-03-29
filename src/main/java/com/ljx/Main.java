@@ -8,22 +8,46 @@ import java.nio.BufferOverflowException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-// staitic成员变量跟普通成员变量的调用方式不同
-class Node{
-    public void f(){
-        System.out.println("function: F");
+class Point{
+    private int x;
+    private int y;
+
+    public Point(int x){
+        this.x = x;
     }
 
-    public static void g(){
-        System.out.println("Function: G");
+    public Point(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public String toString(){
+        return String.format("(%d, %d)", x, y);
     }
 }
 
 public class Main {
     public static void main(String[] args){
-        Node node = new Node();
-        node.f();
+        Point point = new Point(3, 4);
 
-        Node.g();
+        point.setX(5);
+
+        System.out.println(point.toString());
     }
 }
