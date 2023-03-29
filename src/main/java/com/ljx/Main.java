@@ -1,18 +1,14 @@
 package com.ljx;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 
 public class Main {
     public static void main(String[] args){
-        Stack<Integer> stk = new Stack<>();
-
-        stk.push(1);
-        stk.push(2);
-        // stk.pop();
-
-        System.out.println(stk.peek());
+        Queue<Integer> q = new LinkedList<>();
+        q.add(1);
+        q.add(2);
+        q.remove();
+        System.out.println(q.peek());
     }
 }
