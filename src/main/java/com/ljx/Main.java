@@ -8,6 +8,12 @@ import java.nio.BufferOverflowException;
 import java.util.Arrays;
 import java.util.Scanner;
 
+// 定义全局变量
+class Argument{
+    public final static int x = 1;
+    public final static int y = 1;
+}
+
 public class Main {
     public static void main(String[] args){
 //        // 数组的输入和输出
@@ -116,13 +122,24 @@ public class Main {
 //        // substring 第一个参数：起点 第二个参数：终点的下一位，左闭右开
 //        // C++里面的substr,第二个参数是长度
 
-        // StringBuffer和StringBuffer
-        // 如果需要不断的加东西，就用这个
-        StringBuffer sb = new StringBuffer("");
-        for (int i = 0; i < 10000; i ++){
-            sb.append("a");
-        }
-        System.out.println(sb);
+//        // StringBuffer和StringBuffer
+//        // 如果需要不断的加东西，就用这个
+//        StringBuffer sb = new StringBuffer("");
+//        for (int i = 0; i < 10000; i ++){
+//            sb.append("a");
+//        }
+//        System.out.println(sb);
 
+        // 函数
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.println(max(a, b));
+
+        System.out.println(Argument.x); // 静态变量访问的时候用类名来访问
+    }
+
+    private static int max(int a, int b){
+        return Math.max(a, b);
     }
 }
